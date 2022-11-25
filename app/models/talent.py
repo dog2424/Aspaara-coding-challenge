@@ -1,6 +1,7 @@
 from sqlalchemy import Column, String, Integer, Boolean, DateTime, Float, JSON
 from datetime import datetime
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.sql import func
 from sqlalchemy.orm import mapper
 
 
@@ -23,9 +24,9 @@ class Talent(Base):
     job_manager_id = Column(String(255))
     total_hours = Column(Float(), nullable=False)
     start_date = Column(DateTime(timezone=True),
-                        server_default=DateTime.now(), nullable=False)
+                        server_default=func.now(), nullable=False)
     end_date = Column(DateTime(timezone=True),
-                      server_default=DateTime.now(), nullable=False)
+                      server_default=func.now(), nullable=False)
     client_name = Column(String(255))
     client_id = Column(String(255), nullable=False)
     industry = Column(String(255))
