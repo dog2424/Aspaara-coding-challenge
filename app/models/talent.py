@@ -3,7 +3,7 @@ from datetime import datetime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql import func
 from sqlalchemy.orm import mapper
-
+from pydantic import BaseModel
 
 Base = declarative_base()
 
@@ -57,3 +57,29 @@ class Talent(Base):
         self.required_skills = talent['requiredSkills']
         self.optional_skills = talent['optionalSkills']
         self.is_unassigned = talent['isUnassigned']
+
+
+class Talent_Response(BaseModel):
+    id: int
+    original_id: str
+    talent_id: str
+    talent_name: str
+    talent_grade: str
+    booking_grade: str
+    operating_unit: str
+    office_city: str
+    office_postal_code: str
+    job_manager_name: str
+    job_manager_id: str
+    total_hours: float
+    start_date: datetime
+    end_date: datetime
+    client_name: str
+    client_id: str
+    industry: str
+    required_skills: object
+    optional_skills: object
+    is_unassigned: bool
+
+    class Config:
+        orm_mode = True

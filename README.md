@@ -72,6 +72,7 @@ For any additional questions on the task please feel free to email
 - pip install SQLAlchemy
 - pip install ijson
 - pip install fastapi
+- pip install fastapi-pagination
 
 ## instructions
 
