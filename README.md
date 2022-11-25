@@ -67,5 +67,12 @@ in `planning.json`, which contains around 10k records.
 For any additional questions on the task please feel free to email
 `sundara.amancharla@aspaara.com`.
 
-pip install SQLAlchemy
-pip install ijson
+## Requirements
+
+- pip install SQLAlchemy
+- pip install ijson
+- pip install fastapi
+
+## instructions
+
+- py app\main.py
