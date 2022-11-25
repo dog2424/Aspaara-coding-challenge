@@ -1,10 +1,10 @@
 from sqlalchemy import Column, String, Integer, Boolean, DateTime, Float, JSON
 from datetime import datetime
-from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import mapper
 
 
-class Base(DeclarativeBase):
-    pass
+Base = declarative_base()
 
 
 class Talent(Base):

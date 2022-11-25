@@ -68,3 +68,4 @@ For any additional questions on the task please feel free to email
 `sundara.amancharla@aspaara.com`.
 
 pip install SQLAlchemy
+pip install ijson
