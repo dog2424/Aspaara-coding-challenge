@@ -1,6 +1,5 @@
 from sqlalchemy import Column, String, Integer, Boolean, DateTime, Float, JSON
 from datetime import datetime
-
 from sqlalchemy.orm import DeclarativeBase
 
 
@@ -9,6 +8,7 @@ class Base(DeclarativeBase):
 
 
 class Talent(Base):
+    __tablename__ = "talents"
 
     id = Column(Integer(), primary_key=True)
     original_id = Column(String(255), unique=True, nullable=False)
